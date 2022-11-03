@@ -3,20 +3,31 @@ package practice;
 
 interface Adder//interface
 {
-  public void add();	//method declaration
+  public int add(int x,int y);	//method declaration
 }
+interface Upperstring
+{
+	public void str();//method declaration
+}
+
 public class Que1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-     int a=5;//value initialization
-     int b=45;
-     String str="welcome";
-     Adder x=()->//used lambda expression
+		
+      Adder x=(n1,n2)->//used lambda expression
      {
-     System.out.println("Numbers is:-"+a+" "+b);//print numbers
-     System.out.println(str.toUpperCase());//string converting to uppercase
+    	 return n1+n2;
      };
-     x.add();//calling method
+     String s1="welcome";//declare string
+     Upperstring s11=()->//using lambda expression
+     {
+    	 
+     System.out.println(s1.toUpperCase());//print
+    
+     };
+    
+    System.out.println( x.add(5,45));//calling method
+    s11.str();//calling method
 }
 }
